@@ -1,46 +1,51 @@
-/* 
-Los comentarios en CSS se escriben entre estos signos 
+/*
+Los comentarios en CSS se escriben entre estos signos
 Los comentarios no afectan a lo que se describa mediante CSS
 */
 
-/* 
+/*
 Partamos con la regla-arroba @keyframes - https://developer.mozilla.org/es/docs/Web/CSS/@keyframes
 Esta es uno de cuatro reglas-arroba que revisaremos hoy, las restantes serán @media, @import y @font-face
 https://developer.mozilla.org/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@keyframes agua {
+@keyframes cualquiera {
   from {
     background: #AFC2D5;
   }
   to {
-    background: #CCDDD3;
+    background: #7AA8D6;
   }
 }
 
 body {
   color:#37474f;
-  padding:0; 
-  margin:0; 
-  font-family: 'Open Sans', sans-serif; 
+  padding:0;
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.75;
   overflow-x: hidden;
+
   /* a continuación llamaré a la animación definada más arriba */
-  animation-name: agua; 
-  animation-duration: 5s;
-  animation-timing-function: ease;
+animation: cualquiera 3s ease-in infinite alternate;
+
+  /*animation-name: agua;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   /* más sobre animación en https://developer.mozilla.org/es/docs/Web/CSS/animation */
 }
 
 a{
-  color:#222;
-  transition: all ease 1s;
+  color:#048A81;
+  transition: all ease 2s;
 }
 
 a:hover{
-  color:#000;
+  color:#D31376;
+  text-decoration: none;
+  margin:1rem;
   text-decoration: none;
 }
 
@@ -60,11 +65,11 @@ pre{
 pre:hover{
   background:rgba(255,255,255,0.4);
   transition: background ease 1s;
-  cursor:crosshair;
+  cursor: pointer;
 }
 
 code{
-  color:#666;  
+  color:#666;
 }
 
 .hidden{
@@ -105,17 +110,17 @@ ul li:nth-of-type(3):after {
   content:" (eviten Safari)";
 }
 
-/* 
+/*
 A continuación se usa otra regla-arroba.
-Esta nos permita re-escribir descripciones según condición medial 
-https://developer.mozilla.org/es/docs/Web/CSS/@media 
+Esta nos permita re-escribir descripciones según condición medial
+https://developer.mozilla.org/es/docs/Web/CSS/@media
 */
 
 @media screen and (max-width:576px){
 
   .imagen{
     height:50vh;
-  }  
+  }
   .texto{
     padding:2rem 2rem 4rem 2rem;
   }
