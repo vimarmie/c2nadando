@@ -8,13 +8,13 @@ Partamos con la regla-arroba @keyframes - https://developer.mozilla.org/es/docs/
 Esta es uno de cuatro reglas-arroba que revisaremos hoy, las restantes serán @media, @import y @font-face
 https://developer.mozilla.org/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales
 */
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @keyframes agua {
   from {
-    background: rgba(127, 217, 243, 1.00);
+    background: #AFC2D5;
   }
   to {
-    background: rgba(0, 200, 231, 1.00);
+    background: #CCDDD3;
   }
 }
 
@@ -22,7 +22,7 @@ body {
   color:#37474f;
   padding:0; 
   margin:0; 
-  font-family: Helvetica, Arial, sans-serif; 
+  font-family: 'Open Sans', sans-serif; 
   line-height: 1.75;
   overflow-x: hidden;
   /* a continuación llamaré a la animación definada más arriba */
@@ -85,7 +85,7 @@ code{
 .imagen{
   height:60vh;
   width:100vw;
-  background:white url('img/flotar.jpg') center center no-repeat;
+  background:white url('https://i.rmbl.ws/s8/6/d/o/F/t/doFta.4Wpjb.1.jpg') center center no-repeat;
   backgroun-size:cover;
 }
 
